@@ -1,0 +1,95 @@
+{% extends 'career/base.html' %}
+{% block content %}
+<div class="col-md-8">
+<form class="form-validation" action="" method="post">
+        {% csrf_token %}
+        <div class="row list-group-item">
+            <div class="col-md-6">
+                    <div class="field-label">Position</div>
+            </div>
+            <div class="col-md-6">
+                    <div class="field-input">{{form.position}}</div>
+            </div>
+        </div>
+        <div class="row list-group-item">
+            <div class="col-md-6">
+                    <div class="field-label">Responsibility</div>
+            </div>
+            <div class="col-md-6">
+                    <div class="field-input">{{form.responsibility}}</div>
+            </div>
+        </div>
+        <div class="row list-group-item">
+            <div class="col-md-6">
+                    <div class="field-label">Current working</div>
+            </div>
+            <div class="col-md-6">
+                    <div class="field-input">{{form.current_working}}</div>
+            </div>
+        </div>
+        <div class="row list-group-item">
+            <div class="col-md-6">
+                    <div class="field-label">Start Month</div>
+            </div>
+            <div class="col-md-6">
+                    <div class="field-input">{{form.start_month}}</div>
+            </div>
+        </div>
+        <div class="row list-group-item">
+            <div class="col-md-6">
+                    <div class="field-label">Start Year</div>
+            </div>
+            <div class="col-md-6">
+                    <div class="field-input">{{form.start_year}}</div>
+            </div>
+        </div>
+        <div class="row list-group-item">
+            <div class="col-md-6">
+                    <div class="field-label">End Month</div>
+            </div>
+            <div class="col-md-6">
+                    <div class="field-input">{{form.end_month}}</div>
+            </div>
+        </div>
+        <div class="row list-group-item">
+            <div class="col-md-6">
+                    <div class="field-label">End Year</div>
+            </div>
+            <div class="col-md-6">
+                    <div class="field-input">{{form.end_year}}</div>
+            </div>
+        </div>
+        <div class="row list-group-item">
+            <div class="col-md-6">
+                    <div class="field-label">Company Type</div>
+            </div>
+            <div class="col-md-6">
+                    <div class="field-input">{{form.company_type}}</div>
+            </div>
+        </div>
+        <div class="row list-group-item">
+            <div class="col-md-6">
+                    <div class="field-label">Company Name</div>
+            </div>
+            <div class="col-md-6">
+                    <div class="field-input">{{form.company_name}}</div>
+            </div>
+        </div>
+        <div class="row list-group-item">
+            <div class="col-md-6">
+                    <div class="field-label">Location</div>
+            </div>
+            <div class="col-md-6">
+                    <div class="field-input">{{form.location}}</div>
+            </div>
+        </div>
+        <div class="row list-group-item">
+            <div class="col-md-10">
+            </div>
+            <div class="col-md-2">
+                    <div class="field-input"><input type="submit" name="Save" value="Save"></div>
+            </div>
+        </div>
+</form>
+</div>
+{% endblock %}
