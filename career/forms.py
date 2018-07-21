@@ -19,3 +19,11 @@ class CareerForm(forms.ModelForm):
             'company_name',
             'location'
         ]
+    def clean(self):
+        cleaned_data = super(CareerForm, self).clean()
+        if int(cleaned_data.get('start_year')) < 1900:
+            raise forms.ValidationError('Start year is invalid')
+        if int(cleaned_data.get('end_year')) < 1900:
+            raise forms.ValidationError('End year is invalid')
+        return cleaned_data
+

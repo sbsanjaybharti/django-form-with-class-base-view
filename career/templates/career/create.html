@@ -1,8 +1,18 @@
 {% extends 'career/base.html' %}
 {% block content %}
 <div class="col-md-8">
+
+{{ form.non_field_errors }}
 <form class="form-validation" action="" method="post">
         {% csrf_token %}
+     <div class="row list-group-item">
+            <div class="col-md-6">
+                    <div class="field-label">User</div>
+            </div>
+            <div class="col-md-6">
+                    <div class="field-input">{{form.user}}</div>
+            </div>
+        </div>
         <div class="row list-group-item">
             <div class="col-md-6">
                     <div class="field-label">Position</div>
