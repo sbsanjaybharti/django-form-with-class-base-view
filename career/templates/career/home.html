@@ -1,0 +1,12 @@
+{% extends 'career/base.html' %}
+{% block content %}
+<div class="col-md-8">
+      <nav class="navbar navbar-default">
+        <ul class="nav nav-pills" role="tablist">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'career_create_form_validation' %}">Form Validation</a></li>
+            <li><a href="{% url 'career_create_form_field_validation' %}">Form Field Validation</a></li>
+        </ul>
+      </nav>
+</div>
+{% endblock %}
