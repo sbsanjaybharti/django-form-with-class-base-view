@@ -60,35 +60,58 @@ class CareerFormWithFieldValidation(forms.ModelForm):
         data = self.cleaned_data['position']
         if(data == None):
             raise forms.ValidationError('Error! Position is required')
+        else:
+            return data
+
     def clean_responsibility(self):
         data = self.cleaned_data['responsibility']
         if(data == None):
             raise forms.ValidationError('Error! Responsibility is required')
+        else:
+            return data
+
     def clean_end_month(self):
         data = self.cleaned_data['end_month']
         if(data == None):
             raise forms.ValidationError('Error! End month is required')
+        else:
+            return data
+
     def clean_start_year(self):
         data = self.cleaned_data['start_year']
         if(data == None):
             raise forms.ValidationError('Error! Start year is required')
         if int(data) < 1900:
             raise forms.ValidationError('Start year is invalid')
+        else:
+            return data
+
     def clean_end_year(self):
         data = self.cleaned_data['end_year']
         if(data == None):
             raise forms.ValidationError('Error! End year is required')
         if int(data) < 1900:
             raise forms.ValidationError('End year is invalid')
+        else:
+            return data
+
     def clean_company_type(self):
         data = self.cleaned_data['company_type']
         if(data == None):
             raise forms.ValidationError('Error! Company type is required')
+        else:
+            return data
+
     def clean_company_name(self):
         data = self.cleaned_data['company_name']
         if(data == None):
             raise forms.ValidationError('Error! Company name is required')
+        else:
+            return data
+
     def clean_location(self):
         data = self.cleaned_data['location']
         if(data == None):
             raise forms.ValidationError('Error! Location is required')
+        else:
+            return data
